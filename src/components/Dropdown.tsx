@@ -6,10 +6,9 @@ interface DropdownProps {
   label: string;
   options: string[];
   onSave?: (value: string) => void;
-  onCancel?: () => void;
 }
 
-export default function Dropdown({ label, options: initialOptions, onSave, onCancel }: DropdownProps) {
+export default function Dropdown({ label, options: initialOptions, onSave }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [options, setOptions] = useState(initialOptions);
@@ -112,7 +111,7 @@ export default function Dropdown({ label, options: initialOptions, onSave, onCan
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-base"
                 onClick={handleCreateOption}
               >
-                Create "{searchText}"
+                Create &quot;{searchText}&quot;
               </div>
             )}
           </div>

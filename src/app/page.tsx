@@ -1,6 +1,5 @@
 'use client';
 
-import Dropdown from '../components/Dropdown';
 import DropdownWithReset from '../components/DropdownWithReset';
 import DropdownWithoutCreateAfterSelect from '../components/DropdownWithoutCreateAfterSelect';
 import DropdownWithAutoSave from '../components/DropdownWithAutoSave';
