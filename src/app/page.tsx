@@ -1,9 +1,10 @@
 'use client';
 
-import DropdownWithReset from '../components/DropdownWithReset';
-import DropdownWithoutCreateAfterSelect from '../components/DropdownWithoutCreateAfterSelect';
-import DropdownWithAutoSave from '../components/DropdownWithAutoSave';
-import DropdownWithCaseSensitive from '../components/DropdownWithCaseSensitive';
+import DropdownWithReset from '../components/iteration1/DropdownWithReset';
+import DropdownWithoutCreateAfterSelect from '../components/iteration1/DropdownWithoutCreateAfterSelect';
+import DropdownWithAutoSave from '../components/iteration1/DropdownWithAutoSave';
+import DropdownWithCaseSensitive from '../components/iteration1/DropdownWithCaseSensitive';
+
 
 export default function Home() {
   const initialOptions = [
@@ -17,13 +18,12 @@ export default function Home() {
 
   const handleSave = (newValue: string) => {
     console.log('New value saved:', newValue);
-    // Here you would typically update your backend or state management
   };
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="p-8 bg-white">
       <div className="max-w-2xl">
-        <h1 className="text-2xl font-bold mb-8">Proposed Behavior</h1>
+        <h1 className="text-2xl font-bold mb-8 text-gray-800">Iteration 1</h1>
         
         <div className="flex flex-col w-2/3">
           <div className="mb-16">
@@ -34,7 +34,7 @@ export default function Home() {
             />
           </div>
           
-          <h2 className="text-xl font-bold mb-8">Behavior Options</h2>
+          <h2 className="text-xl font-bold mb-8 text-gray-800">Behavior Options</h2>
           
           <div className="flex flex-col gap-8">
             <DropdownWithReset 
