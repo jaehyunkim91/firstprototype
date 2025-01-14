@@ -102,7 +102,7 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
   const renderCreateOption = (style?: string) => {
     if (style === 'icon' || style === 'icon-italic') {
       return (
-        <div className="flex items-center">
+        <div className="flex items-center text-gray-900">
           <svg 
             className="w-4 h-4 mr-1.5"
             fill="none" 
@@ -127,14 +127,14 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
 
   return (
     <div className="w-full" ref={dropdownRef}>
-      <label className="block text-base mb-1">
+      <label className="block text-base mb-1 text-gray-900">
         {label}
       </label>
       <div className="relative">
         <input
           ref={inputRef}
           type="text"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#055456] text-base"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#055456] text-base text-gray-900"
           placeholder="Search or create new"
           value={searchText}
           onChange={handleInputChange}
@@ -151,7 +151,7 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
           }}
         >
           <svg
-            className={`w-5 h-5 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            className={`w-5 h-5 text-gray-900 transition-transform ${isOpen ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -168,7 +168,7 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
                   <div
                     key={index}
                     ref={option === selectedOption ? selectedOptionRef : null}
-                    className={`px-4 py-2 cursor-pointer text-base ${
+                    className={`px-4 py-2 cursor-pointer text-base text-gray-900 ${
                       option === selectedOption 
                         ? 'border-2 border-[#6E9A9B]'
                         : 'hover:bg-[#E6EDED] hover:text-[#055456]'
@@ -181,7 +181,7 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
                 {searchText && !hasExactMatch && (
                   <div
                     ref={`Create "${searchText}"` === selectedOption ? selectedOptionRef : null}
-                    className={`px-4 py-2 cursor-pointer text-base ${
+                    className={`px-4 py-2 cursor-pointer text-base text-gray-900 ${
                       `Create "${searchText}"` === selectedOption 
                         ? 'border-2 border-[#6E9A9B]'
                         : 'hover:bg-[#E6EDED] hover:text-[#055456]'
@@ -201,7 +201,7 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
                     <div
                       key={index}
                       ref={option === selectedOption ? selectedOptionRef : null}
-                      className={`px-4 py-2 cursor-pointer text-base ${
+                      className={`px-4 py-2 cursor-pointer text-base text-gray-900 ${
                         option === selectedOption 
                           ? 'border-2 border-[#6E9A9B]'
                           : 'hover:bg-[#E6EDED] hover:text-[#055456]'
@@ -217,7 +217,7 @@ export default function DropdownWithReset({ label, options: initialOptions, onSa
                     <div className="border-t border-gray-200 my-1"></div>
                     <div
                       ref={`Create "${searchText}"` === selectedOption ? selectedOptionRef : null}
-                      className={`px-4 py-2 cursor-pointer text-base sticky bottom-0 bg-white ${
+                      className={`px-4 py-2 cursor-pointer text-base text-gray-900 ${
                         `Create "${searchText}"` === selectedOption 
                           ? 'border-2 border-[#6E9A9B]'
                           : 'hover:bg-[#E6EDED] hover:text-[#055456]'
